@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>التوعية بالسكري | أمل أزرق</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6fbff;--card:#fafdff;--ink:#1e2b3a;--mute:#5d7088;--p:#1f6fb8;--pd:#0f3f73;--soft:#d6e9f8;--line:#cfe2f2;--sh:0 8px 24px rgba(31,111,184,.12);color-scheme:light}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{font-family:Tajawal,system-ui,sans-serif;background:linear-gradient(180deg,#fdfeff 0%,var(--bg) 100%) fixed;color:var(--ink);line-height:1.9;overflow-x:hidden}
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;animation:fl 18s ease-in-out infinite alternate}
+.b1{width:380px;height:380px;background:#cfe6fb;top:-80px;right:-80px}
+.b2{width:320px;height:320px;background:#dff0ff;top:45%;left:-100px;animation-delay:-6s}
+.b3{width:300px;height:300px;background:#c5def7;bottom:-80px;right:15%;animation-delay:-11s}
+@keyframes fl{to{transform:translate(40px,60px) scale(1.15)}}
+.dr{position:absolute;bottom:-40px;background:radial-gradient(circle at 30% 30%,#fff,#a9d3f7 60%,#7ab8ea);border-radius:50%;opacity:0;animation:rise linear infinite}
+@keyframes rise{0%{transform:translateY(0) translateX(0);opacity:0}10%{opacity:.7}50%{transform:translateY(-55vh) translateX(18px)}100%{transform:translateY(-115vh) translateX(-14px);opacity:0}}
+.hero,section,footer{position:relative;z-index:1}
+.drop{animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px)}}
+@media (prefers-reduced-motion:reduce){.blob,.dr,.drop{animation:none}.dr{display:none}}
+h1,h2,h3{font-family:Amiri,serif;color:var(--pd);line-height:1.4}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-family:Amiri,serif;font-size:1.5rem;color:var(--p);font-weight:700;text-decoration:none}
+nav{display:flex;gap:6px}
+nav a{color:var(--ink);text-decoration:none;padding:6px 12px;border-radius:99px;font-weight:500;font-size:.95rem}
+nav a:hover{background:var(--soft)}
+#mb{display:none;background:none;border:0;font-size:1.7rem;color:var(--p);cursor:pointer}
+@media(max-width:820px){#mb{display:block}nav{display:none;position:absolute;top:100%;inset-inline:0;flex-direction:column;background:var(--bg);padding:10px 18px;border-bottom:1px solid var(--line)}nav.open{display:flex}}
+section,.hero{max-width:1100px;margin:auto;padding:56px 18px}
+.hero{text-align:center;padding-top:70px}
+.drop{font-size:4rem;filter:drop-shadow(0 6px 10px rgba(31,111,184,.3))}
+.hero h1{font-size:clamp(2.2rem,7vw,3.8rem);margin:14px 0 10px}
+.hero p.lead{max-width:680px;margin:auto;color:var(--ink);font-size:1.1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:28px;text-align:start}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--sh)}
+.card .n{font-family:Amiri,serif;font-size:2.8rem;color:var(--p);line-height:1.2}
+.card .src{color:var(--mute);font-size:.85rem;margin-top:8px}
+.card .em{font-size:2rem}
+.card h3{font-size:1.25rem;margin:4px 0}
+.card p{font-size:.97rem}
+.note{color:var(--mute);font-size:.88rem;margin-top:16px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.btn{padding:14px 30px;border-radius:99px;font-weight:700;text-decoration:none;border:2px solid var(--p);color:var(--p);background:var(--card)}
+.btn.f{background:var(--p);color:#fff;box-shadow:0 10px 22px rgba(31,111,184,.3)}
+h2{font-size:2.2rem;margin-bottom:10px}
+h3.sub{font-size:1.5rem;margin:38px 0 6px}
+ul.ck{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px 18px}
+ul.ck li{padding-inline-start:28px;position:relative}
+ul.ck li:before{content:"💧";position:absolute;inset-inline-start:0;font-size:.9rem}
+.tw{overflow-x:auto;margin-top:12px}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:18px;overflow:hidden;border:1px solid var(--line);min-width:520px}
+td,th{padding:12px 16px;text-align:start;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--soft);color:var(--pd)}
+td:first-child{font-weight:700;color:var(--p);white-space:nowrap}
+.mf{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 20px;margin-top:12px}
+.mf b.m{color:#c0392b}.mf b.f{color:#1a8a5a}
+details{background:var(--card);border:1px solid var(--line);border-radius:18px;margin-top:10px;padding:14px 20px}
+summary{cursor:pointer;font-weight:700;color:var(--pd)}
+details p{margin-top:8px}
+.links a{color:var(--p);display:block;padding:6px 0}
+footer{text-align:center;padding:36px 18px calc(36px + env(safe-area-inset-bottom,0px));color:var(--mute);border-top:1px solid var(--line);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div id="drops"></div></div>
+<header><div class="bar">
+<a class="logo" href="#home">💧 أمل أزرق</a>
+<button id="mb" aria-label="القائمة">☰</button>
+<nav id="nv">
+<a href="#home">الرئيسية</a><a href="#types">أنواع السكري والأعراض</a><a href="#prevention">الوقاية والكشف المبكر</a><a href="#stories">قصص الأمل والدعم</a><a href="#faq">الأسئلة الشائعة والمصادر</a>
+</nav></div></header>
+
+<div class="hero" id="home">
+<div class="drop">💧</div>
+<h1>السكري ليس نهاية الطريق</h1>
+<p class="lead">المعرفة أول أشكال العناية. الكشف المبكر والتعايش الواعي يحوّلان الخوف إلى خطة، والخطة إلى حياة صحية مستقرة بإذن الله.</p>
+<div class="grid">
+<div class="card"><div class="n">830 مليون</div><p>شخص يعيشون مع السكري في العالم عام 2022</p><div class="src">منظمة الصحة العالمية</div></div>
+<div class="card"><div class="n">1.6 مليون</div><p>وفاة سببها السكري مباشرة عام 2021</p><div class="src">منظمة الصحة العالمية</div></div>
+<div class="card"><div class="n">نحو 4 من 10</div><p>من البالغين المصابين لا يعرفون أنهم مصابون، لذلك الفحص مهم</p><div class="src">الاتحاد الدولي للسكري (أطلس السكري)</div></div>
+<div class="card"><div class="n">58%</div><p>انخفاض في خطر الإصابة بالنوع الثاني لدى المعرّضين بتغيير نمط الحياة (دراسة DPP)</p><div class="src">برنامج الوقاية من السكري، الولايات المتحدة</div></div>
+</div>
+<p class="note">المصادر: صحيفة وقائع السكري لمنظمة الصحة العالمية، وأطلس السكري للاتحاد الدولي للسكري. الأرقام تتحدث دورياً، فراجعي الروابط في قسم المصادر.</p>
+<div class="btns"><a class="btn f" href="#prevention">دليل الكشف المبكر</a><a class="btn" href="#stories">قصص الأمل والدعم</a></div>
+</div>
+
+<section id="types">
+<h2>أنواع السكري والأعراض</h2>
+<p>الأنسولين هرمون يفرزه البنكرياس ويُدخل سكر الدم (الجلوكوز) إلى خلايا الجسم لتستخدمه طاقة. في السكري إما لا يُفرز الأنسولين بالقدر الكافي، أو لا يستجيب له الجسم جيداً، فيرتفع السكر في الدم. ومع المتابعة والعلاج يعيش المصابون حياة طويلة ونشطة.</p>
+<div class="grid">
+<div class="card"><div class="em">🧬</div><h3>النوع الأول</h3><p>يهاجم الجهاز المناعي خلايا البنكرياس المنتجة للأنسولين، فيحتاج المصاب إلى الأنسولين يومياً. يظهر غالباً في الطفولة أو الشباب وقد يظهر في أي عمر.</p></div>
+<div class="card"><div class="em">⚖️</div><h3>النوع الثاني</h3><p>الأكثر شيوعاً. يقل استجابة الجسم للأنسولين مع الوقت. ترتبط به زيادة الوزن وقلة الحركة والتاريخ العائلي، وكثيراً ما يمكن الوقاية منه أو تأخيره.</p></div>
+<div class="card"><div class="em">🤰</div><h3>سكري الحمل</h3><p>يظهر أثناء الحمل وغالباً يزول بعد الولادة، لكنه يرفع خطر الإصابة بالنوع الثاني لاحقاً، وتلزم متابعة الأم والجنين.</p></div>
+<div class="card"><div class="em">⚠️</div><h3>ما قبل السكري</h3><p>سكر الدم أعلى من الطبيعي دون حد التشخيص. مرحلة إنذار يمكن فيها التراجع بنمط حياة صحي.</p></div>
+</div>
+
+<h3 class="sub">علامات الإنذار المبكر</h3>
+<ul class="ck">
+<li>عطش شديد ومتكرر</li><li>كثرة التبول خاصة ليلاً</li><li>جوع مستمر</li><li>إرهاق وتعب غير مبرر</li><li>تشوش الرؤية</li><li>بطء التئام الجروح</li><li>تنميل أو وخز في اليدين والقدمين</li><li>فقدان وزن دون سبب (خاصة في النوع الأول)</li>
+</ul>
+<p class="note">كثير من المصابين بالنوع الثاني لا تظهر عليهم أعراض لسنوات، ولهذا يُنصح بالفحص الدوري حتى مع غياب الأعراض.</p>
+
+<h3 class="sub">كيف يرتفع السكر في الدم؟</h3>
+<div class="grid">
+<div class="card"><div class="em">1️⃣</div><h3>الطعام والجلوكوز</h3><p>يحوّل الجسم الكربوهيدرات إلى جلوكوز يدخل مجرى الدم.</p></div>
+<div class="card"><div class="em">2️⃣</div><h3>إفراز الأنسولين</h3><p>يفرز البنكرياس الأنسولين ليفتح أبواب الخلايا أمام الجلوكوز.</p></div>
+<div class="card"><div class="em">3️⃣</div><h3>خلل في العملية</h3><p>إن نقص الأنسولين أو ضعفت الاستجابة له يبقى الجلوكوز في الدم.</p></div>
+<div class="card"><div class="em">4️⃣</div><h3>المضاعفات</h3><p>الارتفاع المزمن قد يضر العينين والكلى والأعصاب والقلب والأقدام، ولهذا تهم السيطرة المبكرة.</p></div>
+</div>
+
+<h3 class="sub">كيف يؤكد الأطباء التشخيص؟</h3>
+<div class="tw"><table>
+<tr><th>الفحص</th><th>قيمة تشير إلى السكري</th></tr>
+<tr><td>السكر الصيامي</td><td>126 ملغ/ديسيلتر فأكثر بعد صيام 8 ساعات على الأقل</td></tr>
+<tr><td>السكر التراكمي (HbA1c)</td><td>6.5% فأكثر</td></tr>
+<tr><td>اختبار تحمّل السكر</td><td>200 ملغ/ديسيلتر فأكثر بعد ساعتين</td></tr>
+<tr><td>السكر العشوائي</td><td>200 ملغ/ديسيلتر فأكثر مع وجود أعراض</td></tr>
+</table></div>
+<p class="note">يؤكد الطبيب التشخيص عادة بتكرار الفحص، ولا يغني هذا الجدول عن تقييمه.</p>
+
+<h3 class="sub">العلاج: أدوات عديدة وخطة واحدة</h3>
+<div class="grid">
+<div class="card"><div class="em">💉</div><h3>الأنسولين</h3><p>أساس علاج النوع الأول، ويحتاجه بعض مرضى النوع الثاني وسكري الحمل.</p></div>
+<div class="card"><div class="em">💊</div><h3>أدوية الفم والحقن الأخرى</h3><p>تساعد على خفض السكر وزيادة استجابة الجسم للأنسولين، بحسب تقدير الطبيب.</p></div>
+<div class="card"><div class="em">🥗</div><h3>الغذاء والحركة</h3><p>حجر الأساس لكل الأنواع، ويقلل الحاجة إلى الدواء في كثير من الحالات.</p></div>
+<div class="card"><div class="em">📟</div><h3>قياس السكر</h3><p>المتابعة المنتظمة بجهاز القياس أو الحساس المستمر تساعد على ضبط الخطة.</p></div>
+</div>
+<p class="note">لا تغيّري جرعة الدواء أو توقفيه دون استشارة الطبيب.</p>
+</section>
+
+<section id="prevention">
+<h2>الوقاية والكشف المبكر</h2>
+<p>النوع الأول لا يمكن الوقاية منه حالياً، أما النوع الثاني فيمكن تأخيره أو الوقاية منه في كثير من الحالات، والاكتشاف المبكر لأي نوع يقلل المضاعفات كثيراً.</p>
+<h3 class="sub">عادات تحمي</h3>
+<div class="grid">
+<div class="card"><div class="em">🏃‍♀️</div><h3>الحركة</h3><p>توصي منظمة الصحة العالمية بنحو 150 دقيقة أسبوعياً من النشاط المعتدل للبالغين، أي نحو 30 دقيقة في معظم أيام الأسبوع.</p></div>
+<div class="card"><div class="em">🍎</div><h3>غذاء متوازن</h3><p>خضروات وبقوليات وحبوب كاملة، وتقليل المشروبات المحلاة والحلويات والمقالي.</p></div>
+<div class="card"><div class="em">⚖️</div><h3>وزن صحي</h3><p>إنقاص 5 إلى 7% من الوزن عند من لديهم زيادة يخفض الخطر بشكل ملحوظ.</p></div>
+<div class="card"><div class="em">🚭</div><h3>لا للتدخين</h3><p>التدخين يزيد خطر السكري ومضاعفاته.</p></div>
+<div class="card"><div class="em">😴</div><h3>نوم كافٍ</h3><p>قلة النوم المزمنة ترتبط بمقاومة الأنسولين وزيادة الوزن.</p></div>
+</div>
+
+<h3 class="sub">من يحتاج إلى فحص مبكر؟</h3>
+<ul class="ck">
+<li>من لديهم زيادة في الوزن أو سمنة</li><li>من لديهم قريب من الدرجة الأولى مصاب بالسكري</li><li>من أصيبت بسكري الحمل سابقاً</li><li>المصابون بارتفاع ضغط الدم أو الدهون</li><li>قلة النشاط البدني</li><li>كل من بلغ 35 سنة فأكثر (يُنصح بالفحص الدوري)</li>
+</ul>
+<p class="note">تتوافق هذه الفئات مع إرشادات عامة، وقد تحدد وزارة الصحة والطبيب توقيتاً مختلفاً بحسب حالتك.</p>
+
+<h3 class="sub">خرافات وحقائق</h3>
+<div class="mf"><b class="m">خرافة:</b> السكري يسببه أكل السكر وحده.<br><b class="f">حقيقة:</b> للنوع الثاني أسباب متعددة منها الوراثة والوزن وقلة الحركة، والإفراط في السكريات جزء من الصورة لا كلها.</div>
+<div class="mf"><b class="m">خرافة:</b> السكري مُعدٍ.<br><b class="f">حقيقة:</b> لا ينتقل من شخص إلى آخر.</div>
+<div class="mf"><b class="m">خرافة:</b> مريض السكري يُمنع من كل الحلويات للأبد.<br><b class="f">حقيقة:</b> يمكن إدراج كميات صغيرة ضمن خطة غذائية متوازنة بحسب إرشاد الأخصائي.</div>
+<div class="mf"><b class="m">خرافة:</b> إذا لم أشعر بأعراض فلا سكري لدي.<br><b class="f">حقيقة:</b> قد يستمر النوع الثاني سنوات دون أعراض، والفحص وحده يكشفه.</div>
+<div class="mf"><b class="m">خرافة:</b> الأنسولين يدل على أن المرض صار سيئاً.<br><b class="f">حقيقة:</b> الأنسولين علاج فعال وآمن، وكثيرون يحتاجونه لضبط السكر.</div>
+
+<h3 class="sub">إسعاف سريع: هبوط السكر</h3>
+<div class="card"><p>إذا شعر المصاب بارتعاش وتعرّق وجوع شديد ودوخة وكان سكره منخفضاً، فيُعطى 15 غراماً من سكر سريع الامتصاص (نصف كوب عصير أو 3 حبات تمر تقريباً)، ثم يُعاد القياس بعد 15 دقيقة. وإن فقد الوعي فاتصلي بالإسعاف فوراً ولا تُعطِه شيئاً بالفم.</p></div>
+</section>
+
+<section id="stories">
+<h2>قصص الأمل والدعم</h2>
+<p>السكري رحلة طويلة، والدعم من الأسرة والمجتمع جزء من العلاج. كثيرون يعيشون سنوات طويلة بصحة جيدة وطموح كبير بالتزامهم بالخطة.</p>
+<div class="grid">
+<div class="card"><div class="em">🤝</div><h3>الأسرة</h3><p>شاركوه الغذاء الصحي والمشي، ولا تجعلوه يشعر أنه وحده.</p></div>
+<div class="card"><div class="em">🏫</div><h3>المدرسة</h3><p>يحتاج الطالب المصاب إلى معلمين يعرفون إسعاف الهبوط والارتفاع ويتيحون له الاستراحة لقياس السكر.</p></div>
+<div class="card"><div class="em">💬</div><h3>الدعم النفسي</h3><p>القلق والإرهاق من المتابعة اليومية شائعان، والحديث مع مختص أو مجموعة دعم يخفف العبء.</p></div>
+</div>
+<h3 class="sub">كلمات تفيد وأخرى يُحسن تجنبها</h3>
+<div class="grid">
+<div class="card"><div class="em">💙</div><h3>كلمات تفيد</h3><p>«أنا بجانبك.» «كيف أساعدك في خطتك اليوم؟» «فخورة بالتزامك.»</p></div>
+<div class="card"><div class="em">🚫</div><h3>يُحسن تجنبه</h3><p>اللوم، ومراقبة كل لقمة، والمقارنة بمرضى آخرين، ونشر علاجات غير موثوقة.</p></div>
+</div>
+<h3 class="sub">كيف تساهم مدرستنا؟</h3>
+<div class="grid">
+<div class="card"><div class="em">🗓️</div><h3>اليوم العالمي للسكري</h3><p>يُحتفى به في 14 نوفمبر من كل عام، وهو وقت مناسب للإذاعة والملصقات.</p></div>
+<div class="card"><div class="em">📣</div><h3>انشري الوعي</h3><p>شاركي هذا الموقع مع الأسرة، فالفحص من سن 35 هدية لمن تحبين.</p></div>
+<div class="card"><div class="em">🏅</div><h3>تحدي الحركة</h3><p>نظّمي تحدياً للمشي 30 دقيقة يومياً مع الصديقات.</p></div>
+</div>
+</section>
+
+<section id="faq">
+<h2>الأسئلة الشائعة والمصادر</h2>
+<details><summary>هل السكري وراثي؟</summary><p>للوراثة دور، خاصة في النوع الثاني، لكن نمط الحياة يؤثر كثيراً. وجود قريب مصاب يعني أن الفحص الدوري ونمط الحياة الصحي أهم لك.</p></details>
+<details><summary>هل يُشفى السكري؟</summary><p>لا يوجد علاج نهائي معروف للنوع الأول. وقد تدخل بعض حالات النوع الثاني في هدأة بإنقاص الوزن الكبير تحت إشراف الطبيب، لكن المتابعة تستمر.</p></details>
+<details><summary>ما الفرق بين السكر الصيامي والتراكمي؟</summary><p>الصيامي يعكس السكر لحظة الفحص، أما التراكمي فيعكس متوسط السكر خلال نحو ثلاثة أشهر.</p></details>
+<details><summary>ما المضاعفات التي يجب الانتباه لها؟</summary><p>اعتلال الشبكية، وأمراض الكلى، واعتلال الأعصاب، وأمراض القلب، وقرحة القدم. الفحص الدوري للعين والكلى والقدمين يكشفها مبكراً.</p></details>
+<details><summary>هل يستطيع المصاب الصيام في رمضان؟</summary><p>يختلف الأمر بحسب النوع والعلاج والحالة. استشر طبيبك قبل رمضان بوقت كافٍ ليضع لك خطة آمنة.</p></details>
+<details><summary>كيف أدعم صديقة مصابة؟</summary><p>اسأليها عما يفيدها، وتجنبي النصائح الطبية والمقارنات، وشاركيها نشاطاً صحياً كالمشي.</p></details>
+<details><summary>كيف أتحدث مع من يخاف من الفحص؟</summary><p>اشرحي أن الفحص بسيط، قياس سكر من وخزة إصبع أو سحب دم، وأن الاكتشاف المبكر يعني علاجاً أسهل.</p></details>
+
+<h3 class="sub">مصادر موثوقة</h3>
+<div class="links card">
+<a href="https://www.who.int/news-room/fact-sheets/detail/diabetes" target="_blank" rel="noopener">منظمة الصحة العالمية: صحيفة وقائع السكري</a>
+<a href="https://diabetesatlas.org" target="_blank" rel="noopener">الاتحاد الدولي للسكري: أطلس السكري</a>
+<a href="https://www.moh.gov.sa" target="_blank" rel="noopener">وزارة الصحة السعودية</a>
+<a href="https://www.cdc.gov/diabetes" target="_blank" rel="noopener">مراكز مكافحة الأمراض والوقاية منها: السكري</a>
+</div>
+<p class="note">هذا الموقع للتوعية العامة ولا يغني عن استشارة الطبيب أو الصيدلي.</p>
+</section>
+
+<footer>عمل الطالبة: ........ | بإشراف المعلمة: ........</footer>
+<script>
+const dp=document.getElementById('drops');
+for(let i=0;i<16;i++){const d=document.createElement('span');d.className='dr';const s=8+Math.random()*22;d.style.cssText='width:'+s+'px;height:'+s+'px;left:'+Math.random()*100+'%;animation-duration:'+(12+Math.random()*14)+'s;animation-delay:-'+Math.random()*20+'s';dp.appendChild(d)}
+const nv=document.getElementById('nv');
+document.getElementById('mb').onclick=()=>nv.classList.toggle('open');
+nv.querySelectorAll('a').forEach(a=>a.onclick=()=>nv.classList.remove('open'));
+</script>
+</body>
+</html>
